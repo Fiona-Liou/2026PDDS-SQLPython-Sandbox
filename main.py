@@ -96,3 +96,7 @@ print("Flight Number | Destination | Aircraft Name | Aircraft Model | Fare")
 # Flight Number | Destination | Aircraft Name | Aircraft Model | Fare
 # 4884 | Chicago | Piper | Archer III | 112.45
 # ...
+
+# ==============================================================================
+# STEP 4: Close Database Connection
+# ==============================================================================
