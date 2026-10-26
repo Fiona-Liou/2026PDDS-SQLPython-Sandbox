@@ -26,7 +26,7 @@ if not os.path.exists(DB_PATH):
 
 
 # ==============================================================================
-# STEP 3: Task 1:Total Flight Count -- Baseline Task
+# STEP 3: Task & Try
 # ==============================================================================
 """
 Task 1: Total Flight Count -- Baseline Question
@@ -47,4 +47,29 @@ result_task_1 = None
 print("Task 1: Total Flight Count")
 print(f"Total number of flights: {result_task_1}")
 # Expected Output: 19
+
+"""
+Task 2: Flight Summary by Origin City
+TODO:   Modify the SQL query below to show:
+        origin city, count of flights, and average fare (rounded to 2 decimal places)
+        Group by origin and order by flight count descending.
+"""
+
+# Type your SQL query below
+sql_task_2 = """
+
+"""
+# Execute SQL query and fetch the result
+
+# Replace this with the code to execute the query and fetch the result
+result_task_2 = None
+
+print("Task 2: Flight Summary by Origin City")
+print("Origin City | Flight Count | Average Fare")
+# Print all the results
+
+# Expected Output:
+# Origin City | Flight Count | Average Fare
+# Los Angeles | 8 | 475.59
+# ...
 
