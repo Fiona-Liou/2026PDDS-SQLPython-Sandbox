@@ -41,4 +41,8 @@ sql_task_1 = """
 
 # Execute SQL query and fetch the result
 
-result_task_1 = None  # Replace this with the code to execute the query and fetch the result
+# Replace this with the code to execute the query and fetch the result
+result_task_1 = None
+
+# Expected Output: 19
+
