@@ -73,3 +73,26 @@ print("Origin City | Flight Count | Average Fare")
 # Los Angeles | 8 | 475.59
 # ...
 
+"""
+Task 3: Join Flight with Aircraft
+TODO:   Find which aircraft model is used for each flight from Madison.
+"""
+
+# Type your SQL query below
+sql_task_3 = """
+
+"""
+
+# Execute SQL query and fetch the result
+
+# Replace this with the code to execute the query and fetch the result
+result_task_3 = None
+
+print("Task 3: Join Flight with Aircraft")
+print("Flight Number | Destination | Aircraft Name | Aircraft Model | Fare")
+# Print all the results
+
+# Expected Output:
+# Flight Number | Destination | Aircraft Name | Aircraft Model | Fare
+# 4884 | Chicago | Piper | Archer III | 112.45
+# ...
