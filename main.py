@@ -19,3 +19,26 @@ if not os.path.exists(DB_PATH):
     print("Please make sure AirlineDB_2026.db is in the same folder as this script.")
     exit(1)
 
+# ==============================================================================
+# STEP 2: Connect to SQLite Database
+# ==============================================================================
+
+
+
+# ==============================================================================
+# STEP 3: Task 1:Total Flight Count -- Baseline Task
+# ==============================================================================
+"""
+Baseline Task: Total Flight Count
+TODO:   Write a SQL query to count the total number of flights in the Flights table.
+        Return the count as a single value.
+"""
+
+# Type your SQL query below
+sql_task_1 = """
+
+"""
+
+# Execute SQL query and fetch the result
+
+result_task_1 = None  # Replace this with the code to execute the query and fetch the result
