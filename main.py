@@ -29,7 +29,7 @@ if not os.path.exists(DB_PATH):
 # STEP 3: Task 1:Total Flight Count -- Baseline Task
 # ==============================================================================
 """
-Baseline Task: Total Flight Count
+Task 1: Total Flight Count -- Baseline Question
 TODO:   Write a SQL query to count the total number of flights in the Flights table.
         Return the count as a single value.
 """
@@ -44,5 +44,7 @@ sql_task_1 = """
 # Replace this with the code to execute the query and fetch the result
 result_task_1 = None
 
+print("Task 1: Total Flight Count")
+print(f"Total number of flights: {result_task_1}")
 # Expected Output: 19
 
