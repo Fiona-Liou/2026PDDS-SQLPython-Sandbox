@@ -23,7 +23,8 @@ if not os.path.exists(DB_PATH):
 # STEP 2: Connect to SQLite Database
 # ==============================================================================
 
-
+conn = sqlite3.connect(DB_PATH)
+cursor = conn.cursor()
 
 # ==============================================================================
 # STEP 3: Task & Try
@@ -36,13 +37,14 @@ TODO:   Write a SQL query to count the total number of flights in the Flights ta
 
 # Type your SQL query below
 sql_task_1 = """
-
+SELECT COUNT(*) FROM Flight;
 """
 
 # Execute SQL query and fetch the result
+cursor.execute(sql_task_1)
 
 # Replace this with the code to execute the query and fetch the result
-result_task_1 = None
+result_task_1 = cursor.fetchone()[0]
 
 print("Task 1: Total Flight Count")
 print(f"Total number of flights: {result_task_1}")
@@ -57,17 +59,22 @@ TODO:   Modify the SQL query below to show:
 
 # Type your SQL query below
 sql_task_2 = """
-
+SELECT origin, ___(*)  AS flight_count, ROUND(___(fare), ___) AS avg_fare
+FROM ___
+GROUP BY ___
+ORDER BY flight_count ___;
 """
 # Execute SQL query and fetch the result
+cursor.execute(sql_task_2)
 
 # Replace this with the code to execute the query and fetch the result
-result_task_2 = None
+result_task_2 = cursor.fetchall()
 
 print("Task 2: Flight Summary by Origin City")
-print("Origin City | Flight Count | Average Fare")
+print(f"{'Origin':<15} | {'Flights':<10} | {'Avg Fare ($)':<12}")
 # Print all the results
-
+for origin, count, avg_fare in result_task_2:
+    print(f"{origin:<15} | {count:<10} | {avg_fare:<12.2f}")
 # Expected Output:
 # Origin City | Flight Count | Average Fare
 # Los Angeles | 8 | 475.59
@@ -80,17 +87,24 @@ TODO:   Find which aircraft model is used for each flight from Madison.
 
 # Type your SQL query below
 sql_task_3 = """
-
+SELECT f.___, f.destination, a.___, a.model, f.fare
+FROM ___ AS f
+___ Aircraft AS a ON f.___ = a.aid
+WHERE f.origin = '___'
+ORDER BY f.fare ___;
 """
 
 # Execute SQL query and fetch the result
+cursor.execute(sql_task_3)
 
 # Replace this with the code to execute the query and fetch the result
-result_task_3 = None
+result_task_3 = cursor.fetchall()
 
 print("Task 3: Join Flight with Aircraft")
-print("Flight Number | Destination | Aircraft Name | Aircraft Model | Fare")
+print(f"{'Flight Number':<6} | {'Destination':<15} | {'Aircraft Name':<10} | {'Aircraft Model':<10} | {'Fare':<8}")
 # Print all the results
+for flno, dest, mname, model, fare in result_task_3:
+    print(f"{flno:<13} | {dest:<15} | {mname:<13} | {model:<14} | {fare:<8.2f}")
 
 # Expected Output:
 # Flight Number | Destination | Aircraft Name | Aircraft Model | Fare
@@ -100,3 +114,5 @@ print("Flight Number | Destination | Aircraft Name | Aircraft Model | Fare")
 # ==============================================================================
 # STEP 4: Close Database Connection
 # ==============================================================================
+
+conn.close()
